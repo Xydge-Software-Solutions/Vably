@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { CheckCircle, ArrowUpRight, Award, ArrowRight, Terminal, Network, Brain, Quote } from 'lucide-react';
+import { CheckCircle, ArrowUpRight, Award, ArrowRight, Terminal, Network, Brain } from 'lucide-react';
+import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 
 export default function Home() {
   return (
@@ -96,7 +97,7 @@ export default function Home() {
       <section className="py-24 px-8 relative overflow-hidden architectural-grid border-y border-surface-container">
         <div className="max-w-7xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="sticky top-32">
+            <div className="lg:sticky lg:top-32">
               <div className="inline-flex items-center gap-3 mb-8">
                 <div className="h-[2px] w-12 bg-primary"></div>
                 <span className="text-primary font-black uppercase tracking-[0.2em] text-xs">The Vision</span>
@@ -200,47 +201,7 @@ export default function Home() {
             <span className="text-primary font-bold uppercase tracking-widest text-xs">Testimonials</span>
             <h2 className="font-headline text-4xl font-extrabold text-on-background mt-2">Built by Success Stories</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_rgba(26,28,30,0.06)] relative">
-              <Quote className="w-12 h-12 text-secondary opacity-20 absolute top-6 right-8" />
-              <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden">
-                  <Image alt="Alumni Portrait" fill className="object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRWqYSBmF6vuUejSRtq5jFLuMY9Oruhdcjj31V1Q1xqJgKFdeXECZyXnmXGsWMMMY-NWODYopRklxUNOqYkUuE8Yig4Cj1E5OX6PrylwSo-OTK9YIUR3UXz9eMBBxY8Ii4jP9tw9O0ghn5_HNbSDGo_LWLHRgxTo_yqP7dglqrtNrc2FE8aACFC-txl5Lqr2HPzmWSZHyyfpUBSdfpRJVLUdkfvHctMmStba5sbDUIMFT0vDLJDNurl3IdnudavqqSdUII7RXeloGA" referrerPolicy="no-referrer" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-on-surface">Amara Okafor</h4>
-                  <p className="text-xs text-outline font-medium">Executive VA @ FinTech Co</p>
-                </div>
-              </div>
-              <p className="text-on-surface-variant italic leading-relaxed">&quot;VABLY didn&apos;t just teach me tools; they taught me how to think. Within 3 months of graduating, I tripled my hourly rate and landed a long-term contract.&quot;</p>
-            </div>
-            <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_rgba(26,28,30,0.06)] relative">
-              <Quote className="w-12 h-12 text-secondary opacity-20 absolute top-6 right-8" />
-              <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden">
-                  <Image alt="Alumni Portrait" fill className="object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_Z3at6xRmgaLAU2nJIC4rjcpVN5becJm1vCloAvHcV-Kg8mLifbAr9odbiyG02C4oQd0OzgTcR461O3R3dnzmP5MOQEb3JWcUzBMXfxXyHIIIYzV1wbGHRmxRiIUqq6wiLxnQaEcRbX-7_Dqrt55mF2iIfEl2Src7LYFKyu6gDqT_SQqaEQEvS-vqGVP7DX_Nk7vuZQpU8nD9FW2SS1hivBPDGt6d0xDvIl0ep0LOh0s9ZoB_nXfDe4XkHFbVdWvUSP2Ggt9EE_NN" referrerPolicy="no-referrer" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-on-surface">James Wilson</h4>
-                  <p className="text-xs text-outline font-medium">Systems Architect @ Creative Agency</p>
-                </div>
-              </div>
-              <p className="text-on-surface-variant italic leading-relaxed">&quot;The frameworks provided by Sifon are literal gold. I went from being a task-taker to a strategic consultant in under 60 days.&quot;</p>
-            </div>
-            <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_rgba(26,28,30,0.06)] relative">
-              <Quote className="w-12 h-12 text-secondary opacity-20 absolute top-6 right-8" />
-              <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden">
-                  <Image alt="Alumni Portrait" fill className="object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjbczIN2qgz_ONvz8dBCU6BW5ezNqyVUr9f-tfFglmyik_GmB_poL_2aiDA7mO3bbKKglgZpPLXQmHtrTqGC8ajCABh0VRZ2dP-W_pqQjA84rjVUP9xt5Z9r2TjfAFN2DXlrncIbqk5_n8Cb-n4muEKa6TuHcCARqZETwrlvyewTYDsAMKaq-wEGkyvKHXwCZ5pf8MCIGNLKACYBUkjTCVQp4ecVlJmKGuNI0lII_KluAVWpNO0_bJFB9bjUL7Y71-2SNJnWdNsVJ-" referrerPolicy="no-referrer" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-on-surface">Sarah Chen</h4>
-                  <p className="text-xs text-outline font-medium">Independent VA Specialist</p>
-                </div>
-              </div>
-              <p className="text-on-surface-variant italic leading-relaxed">&quot;The community alone is worth the investment. Being surrounded by high-level architects pushes you to perform at your peak every day.&quot;</p>
-            </div>
-          </div>
+          <TestimonialCarousel />
         </div>
       </section>
 

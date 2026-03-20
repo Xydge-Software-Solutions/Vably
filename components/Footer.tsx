@@ -1,7 +1,16 @@
 import Link from 'next/link';
-import { Megaphone, Globe, MessageCircle } from 'lucide-react';
+import { Linkedin, Twitter, Instagram, Youtube, Facebook, Mail } from 'lucide-react';
 
 export function Footer() {
+  const socialLinks = [
+    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+    { icon: Youtube, href: 'https://youtube.com', label: 'YouTube' },
+    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
+    { icon: Mail, href: 'mailto:hello@vably.com', label: 'Email' },
+  ];
+
   return (
     <footer className="bg-emerald-950 text-emerald-400 py-16 px-8">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
@@ -29,10 +38,22 @@ export function Footer() {
         </div>
         <div>
           <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6 font-label">Connect</h4>
-          <div className="flex gap-4">
-            <Megaphone className="w-6 h-6 cursor-pointer hover:text-white transition-colors" />
-            <Globe className="w-6 h-6 cursor-pointer hover:text-white transition-colors" />
-            <MessageCircle className="w-6 h-6 cursor-pointer hover:text-white transition-colors" />
+          <div className="flex gap-4 flex-wrap">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="text-emerald-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
