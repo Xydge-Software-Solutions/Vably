@@ -3,10 +3,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Terminal, Network, Brain, CheckCircle } from 'lucide-react';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 export default function SyllabusPage() {
+  return (
+    <Suspense fallback={<main className="pt-24 px-8 py-16">Loading syllabus...</main>}>
+      <SyllabusContent />
+    </Suspense>
+  );
+}
+
+function SyllabusContent() {
   const searchParams = useSearchParams();
   const [selectedTab, setSelectedTab] = useState<number | null>(null);
 
