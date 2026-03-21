@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { CheckCircle, ArrowLeft, ArrowRight, Network, Sparkles, Rocket, GraduationCap, Check, Download, Star } from 'lucide-react';
+import Link from 'next/link';
+import { CheckCircle, ArrowLeft, ArrowRight, Terminal, Network, Brain, GraduationCap, Check, Download, Star } from 'lucide-react';
 
 export default function Programs() {
   return (
@@ -50,41 +51,41 @@ export default function Programs() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Program Card 1 */}
-            <div className="group bg-surface-container-lowest rounded-[2rem] p-8 editorial-shadow hover:bg-primary transition-all duration-500 overflow-hidden relative">
+            <Link href="/syllabus?tab=0" className="group bg-surface-container-lowest rounded-[2rem] p-8 editorial-shadow hover:bg-primary transition-all duration-500 overflow-hidden relative">
+              <div className="mb-8 w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center group-hover:bg-secondary-fixed transition-colors">
+                <Terminal className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-headline text-2xl font-bold mb-4 group-hover:text-white transition-colors">Technical Stack Masterclass</h3>
+              <p className="text-on-surface-variant mb-8 group-hover:text-primary-fixed transition-colors">Master the modern SaaS landscape: CRM, Automation, and Project Management tools used by Silicon Valley startups.</p>
+              <div className="flex items-center gap-2 font-bold text-primary group-hover:text-secondary-fixed transition-colors">
+                View Syllabus <ArrowRight className="w-5 h-5" />
+              </div>
+              <Terminal className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.03] group-hover:opacity-10 group-hover:text-white transition-opacity" />
+            </Link>
+            {/* Program Card 2 */}
+            <Link href="/syllabus?tab=1" className="group bg-surface-container-lowest rounded-[2rem] p-8 editorial-shadow hover:bg-primary transition-all duration-500 overflow-hidden relative">
               <div className="mb-8 w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center group-hover:bg-secondary-fixed transition-colors">
                 <Network className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-headline text-2xl font-bold mb-4 group-hover:text-white transition-colors">Executive Architecture</h3>
-              <p className="text-on-surface-variant mb-8 group-hover:text-primary-fixed transition-colors">High-level strategic support, workflow optimization, and stakeholder management for CEOs.</p>
-              <div className="flex items-center gap-2 font-bold text-primary group-hover:text-secondary-fixed transition-colors cursor-pointer">
+              <h3 className="font-headline text-2xl font-bold mb-4 group-hover:text-white transition-colors">The VA Accelerator</h3>
+              <p className="text-on-surface-variant mb-8 group-hover:text-primary-fixed transition-colors">Our flagship 8-week cohort. From administrative assistant to indispensable strategic partner.</p>
+              <div className="flex items-center gap-2 font-bold text-primary group-hover:text-secondary-fixed transition-colors">
                 View Syllabus <ArrowRight className="w-5 h-5" />
               </div>
               <Network className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.03] group-hover:opacity-10 group-hover:text-white transition-opacity" />
-            </div>
-            {/* Program Card 2 */}
-            <div className="group bg-surface-container-lowest rounded-[2rem] p-8 editorial-shadow hover:bg-primary transition-all duration-500 overflow-hidden relative">
-              <div className="mb-8 w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center group-hover:bg-secondary-fixed transition-colors">
-                <Sparkles className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="font-headline text-2xl font-bold mb-4 group-hover:text-white transition-colors">AI &amp; Automation Ops</h3>
-              <p className="text-on-surface-variant mb-8 group-hover:text-primary-fixed transition-colors">Mastering the stack: AI integration, Zapier workflows, and predictive task management.</p>
-              <div className="flex items-center gap-2 font-bold text-primary group-hover:text-secondary-fixed transition-colors cursor-pointer">
-                View Syllabus <ArrowRight className="w-5 h-5" />
-              </div>
-              <Sparkles className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.03] group-hover:opacity-10 group-hover:text-white transition-opacity" />
-            </div>
+            </Link>
             {/* Program Card 3 */}
-            <div className="group bg-surface-container-lowest rounded-[2rem] p-8 editorial-shadow hover:bg-primary transition-all duration-500 overflow-hidden relative">
+            <Link href="/syllabus?tab=2" className="group bg-surface-container-lowest rounded-[2rem] p-8 editorial-shadow hover:bg-primary transition-all duration-500 overflow-hidden relative">
               <div className="mb-8 w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center group-hover:bg-secondary-fixed transition-colors">
-                <Rocket className="w-8 h-8 text-primary" />
+                <Brain className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-headline text-2xl font-bold mb-4 group-hover:text-white transition-colors">Agency Foundations</h3>
-              <p className="text-on-surface-variant mb-8 group-hover:text-primary-fixed transition-colors">Scaling from solo professional to boutique agency owner with sustainable frameworks.</p>
-              <div className="flex items-center gap-2 font-bold text-primary group-hover:text-secondary-fixed transition-colors cursor-pointer">
+              <h3 className="font-headline text-2xl font-bold mb-4 group-hover:text-white transition-colors">Elite Communication</h3>
+              <p className="text-on-surface-variant mb-8 group-hover:text-primary-fixed transition-colors">Master the soft skills: High-stakes negotiation, client retention, and executive presence for the digital world.</p>
+              <div className="flex items-center gap-2 font-bold text-primary group-hover:text-secondary-fixed transition-colors">
                 View Syllabus <ArrowRight className="w-5 h-5" />
               </div>
-              <Rocket className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.03] group-hover:opacity-10 group-hover:text-white transition-opacity" />
-            </div>
+              <Brain className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.03] group-hover:opacity-10 group-hover:text-white transition-opacity" />
+            </Link>
           </div>
         </div>
       </section>

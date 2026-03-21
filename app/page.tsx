@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { CheckCircle, ArrowUpRight, Award, ArrowRight, Terminal, Network, Brain } from 'lucide-react';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 
@@ -109,43 +110,53 @@ export default function Home() {
                 In a global market flooded with generalists, VABLY is the definitive academy for professionals who demand more from their careers. We bridge the gap between basic task execution and strategic partnership.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-6 bg-white border-l-4 border-primary shadow-sm">
-                  <h4 className="font-bold text-on-surface mb-2">Technical Mastery</h4>
-                  <p className="text-sm text-on-surface-variant">Deep-dive training into the exact SaaS stacks high-growth companies use.</p>
+                <div className="p-6 bg-white border-l-4 border-primary shadow-sm rounded-xl">
+                  <Terminal className="w-8 h-8 text-primary mb-3" />
+                  <h4 className="font-bold text-on-surface mb-2">Technical Stack Mastery</h4>
+                  <p className="text-sm text-on-surface-variant">Master CRM, Automation, and Project Management tools used by top startups.</p>
                 </div>
-                <div className="p-6 bg-white border-l-4 border-secondary shadow-sm">
-                  <h4 className="font-bold text-on-surface mb-2">High-Value Network</h4>
-                  <p className="text-sm text-on-surface-variant">Direct pathways to Upwork&apos;s most prestigious and high-paying roles.</p>
+                <div className="p-6 bg-white border-l-4 border-secondary shadow-sm rounded-xl">
+                  <Network className="w-8 h-8 text-secondary mb-3" />
+                  <h4 className="font-bold text-on-surface mb-2">Strategic Partnership</h4>
+                  <p className="text-sm text-on-surface-variant">Transform from assistant to indispensable Digital Architect. 8-week flagship program.</p>
                 </div>
+              </div>
+              <div className="mt-6 p-6 bg-white border-l-4 border-emerald-600 shadow-sm rounded-xl">
+                <Brain className="w-8 h-8 text-emerald-600 mb-3" />
+                <h4 className="font-bold text-on-surface mb-2">Elite Communication Skills</h4>
+                <p className="text-sm text-on-surface-variant">Master negotiation, client retention, and executive presence for the digital economy.</p>
               </div>
             </div>
             <div className="space-y-12 lg:pt-12">
               <div className="relative pl-12 border-l border-outline-variant/30 pb-12">
-                <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-[10px] font-bold">1</div>
-                <h3 className="text-2xl font-bold font-headline mb-4 text-on-background">The Blueprint for Authority</h3>
-                <p className="text-on-surface-variant leading-relaxed">
-                  Our curriculum is built on the real-world success of our founder, Sifon Thomas. As a Top-Rated Expert who has billed thousands of hours for global executives, Sifon has decoded the DNA of high-value remote work. VABLY teaches you how to design workflows, manage complex projects, and become the &quot;Digital Architect&quot; every founder dreams of hiring.
+                <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-[10px] font-bold"><Terminal className="w-3 h-3" /></div>
+                <h3 className="text-2xl font-bold font-headline mb-4 text-on-background">Technical Stack Masterclass</h3>
+                <p className="text-on-surface-variant leading-relaxed mb-4">
+                  Learn the modern SaaS landscape that powers elite operations. From HubSpot CRM to Zapier automation, master the exact tools used by Silicon Valley startups and scale-ups.
                 </p>
+                <p className="text-sm text-outline font-bold">6 weeks • $1,499</p>
               </div>
               <div className="relative pl-12 border-l border-outline-variant/30 pb-12">
-                <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container text-[10px] font-bold">2</div>
-                <h3 className="text-2xl font-bold font-headline mb-4 text-on-background">Elite Career Engineering</h3>
-                <p className="text-on-surface-variant leading-relaxed">
-                  Beyond the skills, we engineer your career path. From profile optimization on platforms like Upwork to mastering the high-stakes negotiation of six-figure contracts, we provide the mentorship required to navigate the elite tiers of the digital economy.
+                <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-[10px] font-bold"><Network className="w-3 h-3" /></div>
+                <h3 className="text-2xl font-bold font-headline mb-4 text-on-background">The VA Accelerator</h3>
+                <p className="text-on-surface-variant leading-relaxed mb-4">
+                  Our flagship 8-week cohort transforms administrative assistants into indispensable strategic partners. Learn the systems, frameworks, and mindset that command six-figure rates.
                 </p>
+                <p className="text-sm text-outline font-bold">8 weeks • $2,999</p>
               </div>
               <div className="relative pl-12 border-l border-outline-variant/30">
-                <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed text-[10px] font-bold">3</div>
-                <h3 className="text-2xl font-bold font-headline mb-4 text-on-background">Future-Proofed Strategy</h3>
-                <p className="text-on-surface-variant leading-relaxed">
-                  The world is shifting toward AI-integrated operations. VABLY ensures you are at the forefront of this evolution, training you to leverage automation and intelligence to multiply your output and value.
+                <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-white text-[10px] font-bold"><Brain className="w-3 h-3" /></div>
+                <h3 className="text-2xl font-bold font-headline mb-4 text-on-background">Elite Communication</h3>
+                <p className="text-on-surface-variant leading-relaxed mb-4">
+                  Master the soft skills that separate average from exceptional. High-stakes negotiation, client retention, and executive presence for the digital world.
                 </p>
+                <p className="text-sm text-outline font-bold">5 weeks • $1,299</p>
               </div>
               <div className="pt-8">
-                <button className="w-full lg:w-auto bg-primary text-on-primary px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:translate-y-[-2px] transition-all flex items-center justify-center gap-4">
-                  Discover the Vably Method
+                <Link href="/syllabus" className="w-full lg:w-auto bg-primary text-on-primary px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:translate-y-[-2px] transition-all flex items-center justify-center gap-4">
+                  View Full Syllabus
                   <ArrowRight className="w-6 h-6" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>
