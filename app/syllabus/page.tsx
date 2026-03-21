@@ -3,19 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Terminal, Network, Brain, CheckCircle } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 export default function SyllabusPage() {
-  const [activeTab, setActiveTab] = useState(0);
   const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const tabParam = searchParams.get('tab');
-    if (tabParam && !isNaN(parseInt(tabParam))) {
-      setActiveTab(parseInt(tabParam));
-    }
-  }, [searchParams]);
+  const [selectedTab, setSelectedTab] = useState<number | null>(null);
 
   const programs = [
     {
@@ -243,6 +236,9 @@ export default function SyllabusPage() {
     }
   ];
 
+  const tabFromQuery = Number.parseInt(searchParams.get('tab') ?? '', 10);
+  const activeTab = selectedTab ?? (Number.isInteger(tabFromQuery) && tabFromQuery >= 0 && tabFromQuery < programs.length ? tabFromQuery : 0);
+
   const currentProgram = programs[activeTab];
 
   return (
@@ -270,7 +266,7 @@ export default function SyllabusPage() {
               return (
                 <button
                   key={program.id}
-                  onClick={() => setActiveTab(index)}
+                  onClick={() => setSelectedTab(index)}
                   className={`p-6 rounded-2xl border-2 transition-all text-left ${
                     activeTab === index
                       ? `${program.color} text-white border-transparent shadow-lg`
